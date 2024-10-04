@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+:root{
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+.main-btn{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    transition: .3s ease-in-out;
+}
+.main-btn:hover{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    box-shadow: rgba(243, 242, 242, 0.2) 0px 2px 8px 0px;
+}
+.main-title::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 3px;
+    background-color: var(--green-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+.navbar{
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav .nav-item .nav-link{
+    color: #fff !important;
+}
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--green-color) !important;
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color);
+}
+.navbar .search svg{
+    color: var(--green-color);
+    cursor: pointer;
+}
+.navbar .navbar-toggler{
+    color: #fff;
+    font-size: 25px;
+    border-color: #fff;
+}
+.navbar .navbar-toggler:focus{
+    box-shadow: none;
+}
+/* start landing */
+.landing{
+    background-color: var(--dark-color);
+    min-height: 100vh;
+}
+/* end landing */
+/* start Features */
+.features .icon-holder{
+    height: 200px;
+}
+.features .icon-holder svg{
+    left: 50%;
+    transform: translate(-50%);
+}
+.features .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder .icon{
+    color: var(--green-color);
+    font-size: 65px;
+}
+.features .feat{
+    color: var(--yellow-color);
+}
+/* end Features */
+/* start our work */
+.our-work{
+    background-color: var(--section-color);
+}
+.our-work ul li.active{
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.our-work ul li{
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover{
+    color: var(--red-color);
+}
+.our-work .box{
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.our-work .box::after{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #33d1cc90;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ffffffcc;
+    transition: .3s;
+    top: 5px;
+    right: 5px;
+    font-size: 1.5rem;
+    transition: .5s ease-in-out;
+    transform: translateX(calc(100% + 5px));
+}
+.our-work .box:hover::after{
+    transform: translateX(0);
+}
+/* end our work */
+/* start stuff */
+.stuff .description{
+    max-width: 500px;
+}
+/* end stuff */
+/* start team */
+.team{
+    background-color: var(--section-color);
+}
+.team h2{
+    color: var(--yellow-color);
+}
+.team .box h4{
+    background-color: var(--green-color);
+}
+/* end team */
+/*Start Project*/
+.project{
+    background-color: var(--dark-color);
+}
+/*end Project*/
+/*Start Sub*/
+.sub{
+    background-color: var(--yellow-color);
+}
+.sub input{
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.sub input:focus{
+    outline: none;
+}
+.sub input::placeholder{
+    color: #fff;
+}
+/*End Sub*/
+/*Start footer*/
+.footer{
+    background-color: var(--dark-color);
+}
+.footer .copy-right > span{
+    color: var(--green-color);
+}
+.footer .copy-right div span{
+    color: var(--yellow-color);
+}
+.footer .content ul svg{
+    width: 20px;
+    height: 20px;
+}
+.footer .facebook{
+    background-color: #1877f2;
+}
+.footer .twitter{
+    background-color: #1da1f2;
+}
+.footer .linkedin{
+    background-color: #0077b5;
+}
+.footer .youtube{
+    background-color: #ff0000;
+}
+/*end footer*/
